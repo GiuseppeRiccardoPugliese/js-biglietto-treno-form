@@ -22,12 +22,12 @@
             <h2 class="text-white text-center fw-bold py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
             <div class="container">
 
-                <form class="row text-center justify-content-center bg-white rounded-3 border-1">
+                <form id="my_form" class="row text-center justify-content-center bg-white rounded-3 border-1">
                     <!-- Parte con i dati da inserire dall'utente -->
                     <div class="col-3">
                         <label class="ms_color-soft-red py-3 ms_fw-600">Nome Cognome</label>
-                        <input class="form-control ms_border-color" type="text"
-                            placeholder="Inserisci il tuo nome e cognome" id="nome1">
+                        <input class="form-control ms_border-color" type="text" id="name_surname"
+                            placeholder="Inserisci il tuo nome e cognome">
                     </div>
                     <div class="col-3">
                         <label class="ms_color-soft-red py-3 ms_fw-600">Km da percorrere</label>
@@ -46,21 +46,63 @@
 
                     <!-- Parte con i button -->
                     <div class="col-12 pt-5 pb-3">
-                        <button id="genera" class="rounded-3 p-1 border-1 border-dark"><span
+                        <button id="genera" class="rounded-3 p-1 border-1 border-dark me-2" type="submit"><span
                                 class="ms_color-soft-red fw-bolder">Genera</span></button>
 
-                        <button id="annulla" class="rounded-3 p-1 border-1 border-dark"><span
+                        <button id="annulla" class="rounded-3 p-1 border-1 border-dark" type="reset"><span
                                 class="ms_color-soft-red fw-bolder">Annulla</span></button>
                     </div>
-
                 </form>
-
             </div>
-
         </section>
 
-    </main>
+        <h2 class="text-white text-center fw-bold pt-3">IL TUO BIGLIETTO</h2>
+        <!--Sezione del TUO BIGLIETTO-->
+        <section id="hidden_ticket">
+            <div class="container bg-white p-4">
+                <div class="row">
+                    <div class="col-12 ps-0">
+                        <h5 class="ms_fw-700 pt-3 mb-0">DETTAGLIO PASSEGGERI</h5>
+                    </div>
+                    <div class="col-3 ms_bg-grey pb-5">
+                        <h5 class="ms_fw-700 pt-3 mb-0">NOME PASSEGGERO</h5>
+                        <h6 class="ms_fw-700" id="nome_cognome">
 
+                        </h6>
+                    </div>
+                    <div class="col-9  d-flex border-top border-bottom border-1 border-dark">
+                        <div class="col-4 d-flex flex-column justify-content-between">
+                            <h6 class="ms_fw-700 mt-3">Offerta</h6>
+                            <span class="mb-3" id="type_of_offer">
+
+                            </span>
+                        </div>
+                        <div class="col-2 d-flex flex-column justify-content-between">
+                            <h6 class="ms_fw-700 mt-3">Carrozza</h6>
+                            <span class="mb-3" id="carriage">
+
+                            </span>
+                        </div>
+                        <div class="col-3 d-flex flex-column justify-content-between">
+                            <h6 class="ms_fw-700 mt-3">Codice CP</h6>
+                            <span class="mb-3" id="code_cp">
+
+                            </span>
+                        </div>
+                        <div class="col-3 d-flex flex-column justify-content-between">
+                            <h6 class="ms_fw-700 mt-3">Costo biglietto</h6>
+                            <span class="mb-3" id="final_price">
+
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
 
     <script src="JS/script.js">
 
